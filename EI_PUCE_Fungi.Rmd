@@ -1,0 +1,313 @@
+---
+title: "GC-MS of wood fungi"
+author: "Jefferson Pastuña"
+date: "2023-08-04"
+output:
+  github_document:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+usethis::git_vaccinate()
+```
+
+## Introduction
+
+The present document aims to record the procedure given for the statistical analysis of secondary metabolites present in the different fungi species. For each step a brief explanation, the code and graphics obtained are included.
+
+The workflow used is taken from the paper ["notame": Workflow for Non-Targeted LC–MS Metabolic Profiling](https://doi.org/10.3390/metabo10040135). Which offers a wide variety of functions to perform metabolomic profile analysis.
+
+## Before to start
+
+The "notame" package accepts as input a feature table that can be obtained through software such as MZMine, MSDial, among others. In this case, the feature table was obtained with the help of MZmine. The (*.txt) file was slightly modified to obtain the final feature table to notame R package.
+
+Modifications made to the raw (*.txt) file can be summarized in adding and renaming columns. The added columns "Column" and "Ion Mode" allow to analyze samples with different types of columns and with different ionization modes respectively. Also, the cells corresponding to mass and retention time must be renamed so that the package can detect and process it.
+
+## Notame workflow
+
+As a first step for the analysis, all the necessary libraries were installed and loaded.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+library(notame)
+library(Biobase)
+library(BiocGenerics)
+library(futile.logger)
+library(ggplot2)
+library(magrittr)
+library(foreach)
+library(iterators)
+library(parallel)
+library(doParallel)
+library(pcaMethods)
+library(patchwork)
+library(cowplot)
+library(Rtsne)
+library(ggdendro)
+library(dplyr)
+library(readxl)
+library(ggsci)
+library(missForest)
+
+```
+
+Then, a project path and a log system was added to have a record of each process executed.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+ppath <- "C:/Users/F4ss0/Documents/Ikiam21062022/Wood_Fungi/"
+init_log(log_file = paste0(ppath, "Result/log.txt"))
+
+```
+
+Next, the feature list was imported.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+data <- read_from_excel(file = "Data/Isabel_Fungi_to_R.xlsx", sheet = 3, 
+                        corner_row = 8, corner_column = "G", 
+                        split_by = c("Column", "Ion Mode"))
+
+```
+
+Once the data was read, the next step was to create a MetaboSet in order to create a specific R object.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+modes <- construct_metabosets(exprs = data$exprs, 
+                              pheno_data = data$pheno_data, 
+                              feature_data = data$feature_data,
+                              group_col = "Group")
+
+```
+
+Finally, each mode was extracted in a single object.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+mode <- modes$Rxt5_EI
+
+```
+
+As a additional step, we can visualize the raw data in order to inspect the processing routines.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+# Data extraction of all dataset
+test_mode <- modes$Rxt5_EI
+# Peak height matrix extraction
+peak_matrix <- exprs(test_mode)
+# Sample information extraction
+sample_info <- test_mode@phenoData@data
+# Transposed matrix
+transp_matrix  <- t(peak_matrix)
+# Change NA for 0 value
+transp_matrix[is.na(transp_matrix)]=0
+# Centered and scaled
+raw_pca <- prcomp(transp_matrix, center = T, scale. = T)
+# Matrix to PCA
+raw_scores <- raw_pca$x %>%                  # scores
+  data.frame %>%                             # 2D data
+  mutate(Sample_ID = rownames(.)) %>%        # Empty column to sample information
+  left_join(sample_info)                     # Join sample information
+# Plot raw PCA
+ggplot(raw_scores, aes(PC1, PC2, shape = Family, color = Family)) +
+  geom_point(size = 3) +
+  #geom_text(label=sample_info$Code, nudge_x = 1, nudge_y = 1, show.legend = FALSE) +
+  guides(x=guide_axis(title = "PC1 (20.17 %)"), y=guide_axis(title = "PC2 (0.0925 %)")) +
+  theme_classic()
+
+```
+
+## Preprocessing
+
+The first step of the preprocessing is to change the features with value equal to 0 to NA.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+mode <- mark_nas(mode, value = 0)
+
+```
+
+Then, features with low detection rate are first flagged and then will be removed. The notame package employs two criteria to select this features. First, is the feature presence in a percentage of QC injections, and then the feature presence in a percentage within a sample group or class.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+mode <- flag_detection(mode, qc_limit = 0.70, group_limit = 0.9)
+
+```
+
+With these values, features which that were not detected in the 70% of the QC injections and 90% of sample groups will be discarded.
+
+The next step for preprocessing correspond to drift correction. The drift correction can be applied by smoothed cubic spline regression.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+corrected <- correct_drift(mode)
+corrected <- correct_drift(corrected)   # Second correction to improve drift correction
+corrected <- correct_drift(corrected)   # Third correction to improve drift correction
+corrected <- correct_drift(corrected)
+corrected <- correct_drift(corrected)
+corrected <- flag_quality(corrected, condition = "RSD_r < 0.3 & D_ratio_r < 0.5")
+
+```
+
+Then we can visualize the correction for QCs.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+EI_corr_sambx <- plot_sample_boxplots(corrected, order_by = "Group", fill_by = "Family")
+EI_corr_pca <- plot_pca(corrected, center = T, shape = "Family", color = "Family") 
+EI_corr_pca + EI_corr_sambx
+
+```
+
+Contaminant peaks based on the Process Blank were removed with MZmine 3.7.0, therefore there are not the Process Blank group in the dataset.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+#corrected_no_blank <- corrected[, corrected$Group != "Blank"]
+
+```
+
+The next step removes the QC from the analysis, since they will not be needed in subsequent treatments.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+corrected_no_qc <- drop_qcs(corrected)
+
+```
+
+We can visualize data without QC.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+EI_corr_sambx <- plot_sample_boxplots(corrected_no_qc, order_by = "Group", fill_by = "Family")
+EI_corr_pca <- plot_pca(corrected_no_qc, center = T, shape = "Family", color = "Family") 
+EI_corr_pca + EI_corr_sambx
+
+```
+
+The next step is feature clustering. This step helps us reduce the number of features of the same molecule that were split due to EI ionization behavior.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+EI_clustered <- cluster_features(corrected_no_qc, rt_window = 1/60, 
+                                    all_features = T,
+                                    corr_thresh = 0.9, 
+                                    d_thresh = 0.8)
+EI_compressed <- compress_clusters(EI_clustered)
+
+```
+
+We can inspect PCA plot after clustering algorithm.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+EI_corr_sambx <- plot_sample_boxplots(EI_compressed, order_by = "Group", fill_by = "Family")
+EI_corr_pca <- plot_pca(EI_compressed, center = T, shape = "Family", color = "Family") 
+EI_corr_pca + EI_corr_sambx
+
+```
+
+Finally the next step imputes the data.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+# Clean data
+set.seed(81)
+imputed <- impute_rf(EI_compressed)
+
+# All data
+#imputed <- impute_rf(imputed, all_features = TRUE)
+
+```
+
+We can inspect PCA plot after imputation.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+EI_corr_sambx <- plot_sample_boxplots(imputed, order_by = "Group", fill_by = "Family")
+EI_corr_pca <- plot_pca(imputed, center = T, shape = "Family", color = "Family") 
+EI_corr_pca + EI_corr_sambx
+
+```
+
+# Second PCA and loading plot
+
+Droping flagged features
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+no_flag <- drop_flagged(imputed)
+
+# Extracting feature table (Expression data)
+peak_Height <- exprs(no_flag)
+
+# Extracting Phenotipic data
+EI_pheno_data <- no_flag@phenoData@data
+```
+
+Preparing data and transposing feature table.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+EI_feat_table_pca  <- t(peak_Height)
+
+#Changing NA to 0 
+EI_feat_table_pca[is.na(EI_feat_table_pca)]=0
+
+# Centering and Scaling features
+EI_pca <- prcomp(EI_feat_table_pca, center = T, scale. = T)
+```
+
+Plotting PCA results.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+scores <- EI_pca$x %>%               # Get PC coordinates
+  data.frame %>%                            # Convert to data frames
+  mutate(Sample_ID = rownames(.)) %>%       # Create a new column with the sample names
+  left_join(EI_pheno_data )                  # Adding metadata
+
+ggplot(scores, aes(PC1, PC2, shape = Family, color = Family)) +
+  geom_point(size = 3) +
+  guides(x=guide_axis(title = "PC 1 (22.02 %)"), y=guide_axis(title = "PC 2 (20.39 %)")) +
+  theme_classic()
+
+# Save plot
+#ggsave('Result/GC-MS/GC_MS_EI_Score_Plot.png', width = 5, height = 4, device='png', dpi="print")
+```
+
+Plotting loading results.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+loadings <- EI_pca$rotation %>%           # Extract loadings
+  data.frame(Feature_name = rownames(.))  # New column with feat name
+```
+
+Creating an artificial table with Feature name and Compound column.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+EI_feat_name <- readxl::read_excel("Data/EI_Metabolites.xlsx", 2)
+
+# Creating a new small table of the annotated compounds
+EI_compouds_all <- left_join(EI_feat_name, loadings)
+
+# Plotting results
+ggplot(loadings, aes(PC1, PC2)) + 
+  geom_point(alpha = 0.2) +
+  theme_classic() + 
+  geom_point(data = EI_compouds_all, size = 1) +
+  ggrepel::geom_label_repel(data = EI_compouds_all, aes(label = Compound), box.padding = 0.8, label.padding = 0.27, label.r = 0.3, cex = 3) +
+  guides(x=guide_axis(title = "PC 1 (22.02 %)"), y=guide_axis(title = "PC 2 (20.39 %)")) +
+  ggsci::scale_color_aaas()
+
+# Save plot
+#ggsave('Result/GC-MS/GC_MS_EI_Loadings_Plot.png', width = 5, height = 4, device='png', dpi="print")
+```
+
+Finish a record.
+
+```{r}
+finish_log()
+```

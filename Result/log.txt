@@ -1,0 +1,1123 @@
+INFO [2023-08-04 12:52:06] Starting logging
+INFO [2023-08-04 12:53:36] Corner detected correctly at row 7, column G
+INFO [2023-08-04 12:53:36] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 12:53:36] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 12:53:36] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 12:53:36] 
+Extracting feature information from rows 8 to 18309 and columns A to G
+INFO [2023-08-04 12:53:36] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 12:53:36] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 12:53:36] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 12:53:36] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 13:42:36] Corner detected correctly at row 7, column G
+INFO [2023-08-04 13:42:36] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 13:42:36] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 13:42:36] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 13:42:36] 
+Extracting feature information from rows 8 to 18309 and columns A to G
+INFO [2023-08-04 13:42:36] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 13:42:36] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 13:42:36] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 13:42:36] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 13:42:46] Starting logging
+INFO [2023-08-04 13:42:52] Corner detected correctly at row 7, column G
+INFO [2023-08-04 13:42:52] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 13:42:52] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 13:42:52] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 13:42:52] 
+Extracting feature information from rows 8 to 18309 and columns A to G
+INFO [2023-08-04 13:42:52] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 13:42:52] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 13:42:52] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 13:42:52] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 14:14:15] Starting logging
+INFO [2023-08-04 14:14:19] Corner detected correctly at row 7, column G
+INFO [2023-08-04 14:14:19] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 14:14:19] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 14:14:19] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 14:14:19] 
+Extracting feature information from rows 8 to 17908 and columns A to G
+INFO [2023-08-04 14:14:19] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 14:14:19] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 14:14:19] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 14:14:19] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 14:15:07] Corner detected correctly at row 7, column G
+INFO [2023-08-04 14:15:07] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 14:15:07] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 14:15:07] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 14:15:07] 
+Extracting feature information from rows 8 to 17908 and columns A to G
+INFO [2023-08-04 14:15:07] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 14:15:07] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 14:15:07] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 14:15:07] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 14:16:35] Starting logging
+INFO [2023-08-04 14:16:39] Corner detected correctly at row 7, column G
+INFO [2023-08-04 14:16:39] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 14:16:39] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 14:16:39] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 14:16:39] 
+Extracting feature information from rows 8 to 17908 and columns A to G
+INFO [2023-08-04 14:16:39] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 14:16:39] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 14:16:39] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 14:16:39] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 14:29:35] Starting logging
+INFO [2023-08-04 14:29:39] Corner detected correctly at row 7, column G
+INFO [2023-08-04 14:29:39] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 14:29:39] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 14:29:39] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 14:29:39] 
+Extracting feature information from rows 8 to 15757 and columns A to G
+INFO [2023-08-04 14:29:39] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 14:29:39] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 14:29:39] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 14:29:39] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 14:30:17] Starting logging
+INFO [2023-08-04 14:30:22] Corner detected correctly at row 7, column G
+INFO [2023-08-04 14:30:22] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 14:30:22] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 14:30:22] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 14:30:22] 
+Extracting feature information from rows 8 to 15757 and columns A to G
+INFO [2023-08-04 14:30:22] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 14:30:22] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 14:30:22] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 14:30:22] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 14:45:40] Starting logging
+INFO [2023-08-04 14:46:05] Corner detected correctly at row 7, column G
+INFO [2023-08-04 14:46:05] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 14:46:05] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 14:46:05] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 14:46:05] 
+Extracting feature information from rows 8 to 14008 and columns A to G
+INFO [2023-08-04 14:46:05] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 14:46:05] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 14:46:05] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 14:46:05] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 16:12:27] Starting logging
+INFO [2023-08-04 16:12:32] Corner detected correctly at row 7, column G
+INFO [2023-08-04 16:12:32] 
+Extracting sample information from rows 1 to 7 and columns H to AC
+INFO [2023-08-04 16:12:32] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 16:12:32] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 16:12:32] 
+Extracting feature information from rows 8 to 921 and columns A to G
+INFO [2023-08-04 16:12:32] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 16:12:32] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 16:12:32] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 16:12:32] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 16:12:32] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 16:12:32] 
+Extracting feature abundances from rows 8 to 921 and columns H to AC
+INFO [2023-08-04 16:12:32] 
+Checking sample information
+INFO [2023-08-04 16:12:32] QC column generated from rows containing 'QC'
+INFO [2023-08-04 16:12:32] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 16:12:32] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 16:12:32] 
+Checking feature information
+INFO [2023-08-04 16:12:32] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 16:12:32] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 16:17:16] 
+Checking feature information
+INFO [2023-08-04 16:17:16] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 16:17:16] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 16:17:16] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 17:32:40] Starting logging
+INFO [2023-08-04 17:32:51] Corner detected correctly at row 8, column G
+INFO [2023-08-04 17:32:51] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 17:32:51] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 17:32:51] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 17:32:51] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 17:32:51] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 17:32:51] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 17:32:51] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 17:32:51] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 17:32:51] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 17:32:51] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 17:32:51] 
+Checking sample information
+INFO [2023-08-04 17:32:51] QC column generated from rows containing 'QC'
+INFO [2023-08-04 17:32:51] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 17:32:51] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 17:32:51] 
+Checking feature information
+INFO [2023-08-04 17:32:51] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 17:32:51] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 17:33:02] Corner detected correctly at row 8, column G
+INFO [2023-08-04 17:33:02] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 17:33:02] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 17:33:02] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 17:33:02] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 17:33:02] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 17:33:02] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 17:33:02] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 17:33:02] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 17:33:02] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 17:33:02] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 17:33:02] 
+Checking sample information
+INFO [2023-08-04 17:33:02] QC column generated from rows containing 'QC'
+INFO [2023-08-04 17:33:02] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 17:33:02] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 17:33:02] 
+Checking feature information
+INFO [2023-08-04 17:33:02] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 17:33:02] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 17:39:22] Starting logging
+INFO [2023-08-04 17:39:30] Corner detected correctly at row 8, column G
+INFO [2023-08-04 17:39:30] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 17:39:30] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 17:39:30] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 17:39:30] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 17:39:30] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 17:39:30] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 17:39:30] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 17:39:30] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 17:39:30] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 17:39:30] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 17:39:30] 
+Checking sample information
+INFO [2023-08-04 17:39:30] QC column generated from rows containing 'QC'
+INFO [2023-08-04 17:39:30] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 17:39:30] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 17:39:30] 
+Checking feature information
+INFO [2023-08-04 17:39:30] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 17:39:30] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 17:39:36] 
+Checking feature information
+INFO [2023-08-04 17:39:36] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 17:39:36] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 17:39:36] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 17:46:07] Starting logging
+INFO [2023-08-04 17:46:10] Corner detected correctly at row 8, column G
+INFO [2023-08-04 17:46:10] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 17:46:10] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 17:46:10] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 17:46:10] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 17:46:10] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 17:46:10] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 17:46:10] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 17:46:10] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 17:46:10] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 17:46:10] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 17:46:10] 
+Checking sample information
+INFO [2023-08-04 17:46:10] QC column generated from rows containing 'QC'
+INFO [2023-08-04 17:46:10] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 17:46:10] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 17:46:10] 
+Checking feature information
+INFO [2023-08-04 17:46:10] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 17:46:10] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 17:46:16] 
+Checking feature information
+INFO [2023-08-04 17:46:16] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 17:46:16] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 17:46:16] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 19:12:28] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 19:36:39] 
+Starting drift correction at 2023-08-04 19:36:39
+INFO [2023-08-04 19:36:41] Drift correction performed at 2023-08-04 19:36:41
+INFO [2023-08-04 19:36:43] Inspecting drift correction results 2023-08-04 19:36:43
+INFO [2023-08-04 19:36:45] Drift correction results inspected at 2023-08-04 19:36:45
+INFO [2023-08-04 19:36:45] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 19:36:45] 
+22% of features flagged for low quality
+INFO [2023-08-04 20:53:43] Starting logging
+INFO [2023-08-04 20:53:45] Corner detected correctly at row 8, column G
+INFO [2023-08-04 20:53:45] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 20:53:45] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 20:53:45] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 20:53:45] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 20:53:45] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 20:53:45] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 20:53:45] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 20:53:45] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 20:53:46] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 20:53:46] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 20:53:46] 
+Checking sample information
+INFO [2023-08-04 20:53:46] QC column generated from rows containing 'QC'
+INFO [2023-08-04 20:53:46] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 20:53:46] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 20:53:46] 
+Checking feature information
+INFO [2023-08-04 20:53:46] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 20:53:46] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 20:54:45] 
+Checking feature information
+INFO [2023-08-04 20:54:45] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 20:54:45] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 20:54:45] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 20:54:51] Starting logging
+INFO [2023-08-04 20:54:54] Corner detected correctly at row 8, column G
+INFO [2023-08-04 20:54:54] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 20:54:54] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 20:54:54] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 20:54:54] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 20:54:54] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 20:54:54] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 20:54:54] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 20:54:54] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 20:54:54] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 20:54:54] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 20:54:54] 
+Checking sample information
+INFO [2023-08-04 20:54:54] QC column generated from rows containing 'QC'
+INFO [2023-08-04 20:54:54] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 20:54:54] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 20:54:54] 
+Checking feature information
+INFO [2023-08-04 20:54:54] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 20:54:54] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 20:55:00] 
+Checking feature information
+INFO [2023-08-04 20:55:00] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 20:55:00] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 20:55:00] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 20:56:37] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 20:56:42] 
+Starting drift correction at 2023-08-04 20:56:42
+INFO [2023-08-04 20:56:45] Drift correction performed at 2023-08-04 20:56:45
+INFO [2023-08-04 20:56:46] Inspecting drift correction results 2023-08-04 20:56:46
+INFO [2023-08-04 20:56:49] Drift correction results inspected at 2023-08-04 20:56:49
+INFO [2023-08-04 20:56:49] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 20:56:49] 
+22% of features flagged for low quality
+INFO [2023-08-04 20:56:49] 
+Starting drift correction at 2023-08-04 20:56:49
+INFO [2023-08-04 20:56:51] Drift correction performed at 2023-08-04 20:56:51
+INFO [2023-08-04 20:56:52] Inspecting drift correction results 2023-08-04 20:56:52
+INFO [2023-08-04 20:56:54] Drift correction results inspected at 2023-08-04 20:56:54
+INFO [2023-08-04 20:56:54] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 20:56:55] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:04:47] Starting logging
+INFO [2023-08-04 21:04:52] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:04:52] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:04:52] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:04:52] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:04:52] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:04:52] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:04:52] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:04:52] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:04:52] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:04:52] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:04:52] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:04:52] 
+Checking sample information
+INFO [2023-08-04 21:04:52] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:04:52] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:04:52] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:04:52] 
+Checking feature information
+INFO [2023-08-04 21:04:52] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:04:52] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:04:58] 
+Checking feature information
+INFO [2023-08-04 21:04:58] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:04:58] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:04:58] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:05:16] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:05:22] 
+Starting drift correction at 2023-08-04 21:05:22
+INFO [2023-08-04 21:05:24] Drift correction performed at 2023-08-04 21:05:24
+INFO [2023-08-04 21:05:25] Inspecting drift correction results 2023-08-04 21:05:25
+INFO [2023-08-04 21:05:28] Drift correction results inspected at 2023-08-04 21:05:28
+INFO [2023-08-04 21:05:28] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:05:28] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:05:28] 
+Starting drift correction at 2023-08-04 21:05:28
+INFO [2023-08-04 21:05:30] Drift correction performed at 2023-08-04 21:05:30
+INFO [2023-08-04 21:05:31] Inspecting drift correction results 2023-08-04 21:05:31
+INFO [2023-08-04 21:05:33] Drift correction results inspected at 2023-08-04 21:05:33
+INFO [2023-08-04 21:05:33] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:05:34] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:08:13] 
+Starting drift correction at 2023-08-04 21:08:13
+INFO [2023-08-04 21:08:15] Drift correction performed at 2023-08-04 21:08:15
+INFO [2023-08-04 21:08:15] Inspecting drift correction results 2023-08-04 21:08:15
+INFO [2023-08-04 21:08:18] Drift correction results inspected at 2023-08-04 21:08:18
+INFO [2023-08-04 21:08:18] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:08:18] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:09:41] Starting logging
+INFO [2023-08-04 21:09:43] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:09:43] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:09:43] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:09:43] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:09:43] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:09:43] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:09:43] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:09:43] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:09:43] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:09:43] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:09:43] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:09:43] 
+Checking sample information
+INFO [2023-08-04 21:09:43] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:09:43] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:09:43] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:09:43] 
+Checking feature information
+INFO [2023-08-04 21:09:43] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:09:43] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:09:47] 
+Checking feature information
+INFO [2023-08-04 21:09:47] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:09:47] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:09:47] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:10:04] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:10:09] 
+Starting drift correction at 2023-08-04 21:10:09
+INFO [2023-08-04 21:10:11] Drift correction performed at 2023-08-04 21:10:11
+INFO [2023-08-04 21:10:12] Inspecting drift correction results 2023-08-04 21:10:12
+INFO [2023-08-04 21:10:14] Drift correction results inspected at 2023-08-04 21:10:14
+INFO [2023-08-04 21:10:14] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:10:14] 
+Starting drift correction at 2023-08-04 21:10:14
+INFO [2023-08-04 21:10:17] Drift correction performed at 2023-08-04 21:10:17
+INFO [2023-08-04 21:10:17] Inspecting drift correction results 2023-08-04 21:10:17
+INFO [2023-08-04 21:10:19] Drift correction results inspected at 2023-08-04 21:10:19
+INFO [2023-08-04 21:10:19] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:10:19] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:15:28] Starting logging
+INFO [2023-08-04 21:15:32] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:15:32] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:15:32] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:15:32] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:15:32] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:15:32] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:15:32] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:15:32] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:15:32] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:15:32] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:15:32] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:15:32] 
+Checking sample information
+INFO [2023-08-04 21:15:32] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:15:32] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:15:32] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:15:32] 
+Checking feature information
+INFO [2023-08-04 21:15:32] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:15:32] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:15:38] 
+Checking feature information
+INFO [2023-08-04 21:15:38] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:15:38] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:15:38] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:15:56] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:16:00] 
+Starting drift correction at 2023-08-04 21:16:00
+INFO [2023-08-04 21:16:02] Drift correction performed at 2023-08-04 21:16:02
+INFO [2023-08-04 21:16:03] Inspecting drift correction results 2023-08-04 21:16:03
+INFO [2023-08-04 21:16:05] Drift correction results inspected at 2023-08-04 21:16:05
+INFO [2023-08-04 21:16:05] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:16:05] 
+Starting drift correction at 2023-08-04 21:16:05
+INFO [2023-08-04 21:16:08] Drift correction performed at 2023-08-04 21:16:08
+INFO [2023-08-04 21:16:08] Inspecting drift correction results 2023-08-04 21:16:08
+INFO [2023-08-04 21:16:10] Drift correction results inspected at 2023-08-04 21:16:10
+INFO [2023-08-04 21:16:10] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:16:10] 
+Starting drift correction at 2023-08-04 21:16:10
+INFO [2023-08-04 21:16:12] Drift correction performed at 2023-08-04 21:16:12
+INFO [2023-08-04 21:16:12] Inspecting drift correction results 2023-08-04 21:16:12
+INFO [2023-08-04 21:16:14] Drift correction results inspected at 2023-08-04 21:16:14
+INFO [2023-08-04 21:16:14] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:16:15] 
+21% of features flagged for low quality
+INFO [2023-08-04 21:18:55] Starting logging
+INFO [2023-08-04 21:18:59] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:18:59] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:18:59] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:18:59] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:18:59] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:18:59] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:18:59] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:18:59] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:18:59] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:18:59] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:18:59] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:18:59] 
+Checking sample information
+INFO [2023-08-04 21:19:00] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:19:00] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:19:00] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:19:00] 
+Checking feature information
+INFO [2023-08-04 21:19:00] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:19:00] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:19:06] 
+Checking feature information
+INFO [2023-08-04 21:19:06] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:19:06] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:19:06] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:19:23] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:19:27] 
+Starting drift correction at 2023-08-04 21:19:27
+INFO [2023-08-04 21:19:29] Drift correction performed at 2023-08-04 21:19:29
+INFO [2023-08-04 21:19:31] Inspecting drift correction results 2023-08-04 21:19:31
+INFO [2023-08-04 21:19:33] Drift correction results inspected at 2023-08-04 21:19:33
+INFO [2023-08-04 21:19:33] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:19:33] 
+Starting drift correction at 2023-08-04 21:19:33
+INFO [2023-08-04 21:19:35] Drift correction performed at 2023-08-04 21:19:35
+INFO [2023-08-04 21:19:35] Inspecting drift correction results 2023-08-04 21:19:35
+INFO [2023-08-04 21:19:38] Drift correction results inspected at 2023-08-04 21:19:38
+INFO [2023-08-04 21:19:38] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:19:38] 
+Starting drift correction at 2023-08-04 21:19:38
+INFO [2023-08-04 21:19:40] Drift correction performed at 2023-08-04 21:19:40
+INFO [2023-08-04 21:19:40] Inspecting drift correction results 2023-08-04 21:19:40
+INFO [2023-08-04 21:19:42] Drift correction results inspected at 2023-08-04 21:19:42
+INFO [2023-08-04 21:19:42] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:19:42] 
+Starting drift correction at 2023-08-04 21:19:42
+INFO [2023-08-04 21:19:44] Drift correction performed at 2023-08-04 21:19:44
+INFO [2023-08-04 21:19:44] Inspecting drift correction results 2023-08-04 21:19:44
+INFO [2023-08-04 21:19:47] Drift correction results inspected at 2023-08-04 21:19:47
+INFO [2023-08-04 21:19:47] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:19:47] 
+21% of features flagged for low quality
+INFO [2023-08-04 21:21:55] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:21:55] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:21:55] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:21:55] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:21:55] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:21:55] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:21:55] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:21:55] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:21:55] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:21:55] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:21:55] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:21:55] 
+Checking sample information
+INFO [2023-08-04 21:21:55] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:21:55] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:21:55] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:21:55] 
+Checking feature information
+INFO [2023-08-04 21:21:55] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:21:55] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:22:01] 
+Checking feature information
+INFO [2023-08-04 21:22:01] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:22:01] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:22:01] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:23:59] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:24:02] 
+Starting drift correction at 2023-08-04 21:24:02
+INFO [2023-08-04 21:24:04] Drift correction performed at 2023-08-04 21:24:04
+INFO [2023-08-04 21:24:06] Inspecting drift correction results 2023-08-04 21:24:06
+INFO [2023-08-04 21:24:08] Drift correction results inspected at 2023-08-04 21:24:08
+INFO [2023-08-04 21:24:08] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:24:08] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:25:28] Starting logging
+INFO [2023-08-04 21:25:32] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:25:32] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:25:32] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:25:32] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:25:32] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:25:32] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:25:32] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:25:32] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:25:32] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:25:32] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:25:32] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:25:32] 
+Checking sample information
+INFO [2023-08-04 21:25:32] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:25:32] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:25:32] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:25:33] 
+Checking feature information
+INFO [2023-08-04 21:25:33] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:25:33] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:25:37] 
+Checking feature information
+INFO [2023-08-04 21:25:37] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:25:37] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:25:37] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:25:54] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:25:58] 
+Starting drift correction at 2023-08-04 21:25:58
+INFO [2023-08-04 21:26:00] Drift correction performed at 2023-08-04 21:26:00
+INFO [2023-08-04 21:26:02] Inspecting drift correction results 2023-08-04 21:26:02
+INFO [2023-08-04 21:26:04] Drift correction results inspected at 2023-08-04 21:26:04
+INFO [2023-08-04 21:26:04] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:26:04] 
+Starting drift correction at 2023-08-04 21:26:04
+INFO [2023-08-04 21:26:06] Drift correction performed at 2023-08-04 21:26:06
+INFO [2023-08-04 21:26:06] Inspecting drift correction results 2023-08-04 21:26:06
+INFO [2023-08-04 21:26:08] Drift correction results inspected at 2023-08-04 21:26:08
+INFO [2023-08-04 21:26:08] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:26:09] 
+Starting drift correction at 2023-08-04 21:26:09
+INFO [2023-08-04 21:26:11] Drift correction performed at 2023-08-04 21:26:11
+INFO [2023-08-04 21:26:11] Inspecting drift correction results 2023-08-04 21:26:11
+INFO [2023-08-04 21:26:13] Drift correction results inspected at 2023-08-04 21:26:13
+INFO [2023-08-04 21:26:13] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:26:13] 
+21% of features flagged for low quality
+INFO [2023-08-04 21:27:26] Starting logging
+INFO [2023-08-04 21:27:29] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:27:29] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:27:29] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:27:29] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:27:29] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:27:29] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:27:29] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:27:29] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:27:29] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:27:29] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:27:29] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:27:29] 
+Checking sample information
+INFO [2023-08-04 21:27:29] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:27:29] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:27:29] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:27:29] 
+Checking feature information
+INFO [2023-08-04 21:27:29] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:27:29] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:27:34] 
+Checking feature information
+INFO [2023-08-04 21:27:34] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:27:34] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:27:34] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:27:52] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:27:56] 
+Starting drift correction at 2023-08-04 21:27:56
+INFO [2023-08-04 21:27:58] Drift correction performed at 2023-08-04 21:27:58
+INFO [2023-08-04 21:27:59] Inspecting drift correction results 2023-08-04 21:27:59
+INFO [2023-08-04 21:28:01] Drift correction results inspected at 2023-08-04 21:28:01
+INFO [2023-08-04 21:28:01] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:28:01] 
+Starting drift correction at 2023-08-04 21:28:01
+INFO [2023-08-04 21:28:03] Drift correction performed at 2023-08-04 21:28:03
+INFO [2023-08-04 21:28:03] Inspecting drift correction results 2023-08-04 21:28:03
+INFO [2023-08-04 21:28:06] Drift correction results inspected at 2023-08-04 21:28:06
+INFO [2023-08-04 21:28:06] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:28:06] 
+Starting drift correction at 2023-08-04 21:28:06
+INFO [2023-08-04 21:28:08] Drift correction performed at 2023-08-04 21:28:08
+INFO [2023-08-04 21:28:08] Inspecting drift correction results 2023-08-04 21:28:08
+INFO [2023-08-04 21:28:10] Drift correction results inspected at 2023-08-04 21:28:10
+INFO [2023-08-04 21:28:10] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:28:10] 
+Starting drift correction at 2023-08-04 21:28:10
+INFO [2023-08-04 21:28:12] Drift correction performed at 2023-08-04 21:28:12
+INFO [2023-08-04 21:28:12] Inspecting drift correction results 2023-08-04 21:28:12
+INFO [2023-08-04 21:28:15] Drift correction results inspected at 2023-08-04 21:28:15
+INFO [2023-08-04 21:28:15] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:28:15] 
+21% of features flagged for low quality
+INFO [2023-08-04 21:29:19] Starting logging
+INFO [2023-08-04 21:29:23] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:29:23] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:29:23] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:29:23] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:29:23] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:29:23] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:29:23] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:29:23] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:29:23] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:29:23] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:29:23] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:29:23] 
+Checking sample information
+INFO [2023-08-04 21:29:23] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:29:23] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:29:23] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:29:23] 
+Checking feature information
+INFO [2023-08-04 21:29:23] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:29:23] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:29:27] 
+Checking feature information
+INFO [2023-08-04 21:29:27] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:29:27] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:29:27] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:29:43] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:29:47] 
+Starting drift correction at 2023-08-04 21:29:47
+INFO [2023-08-04 21:29:49] Drift correction performed at 2023-08-04 21:29:49
+INFO [2023-08-04 21:29:50] Inspecting drift correction results 2023-08-04 21:29:50
+INFO [2023-08-04 21:29:52] Drift correction results inspected at 2023-08-04 21:29:52
+INFO [2023-08-04 21:29:52] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:29:52] 
+Starting drift correction at 2023-08-04 21:29:52
+INFO [2023-08-04 21:29:55] Drift correction performed at 2023-08-04 21:29:55
+INFO [2023-08-04 21:29:55] Inspecting drift correction results 2023-08-04 21:29:55
+INFO [2023-08-04 21:29:57] Drift correction results inspected at 2023-08-04 21:29:57
+INFO [2023-08-04 21:29:57] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:29:57] 
+Starting drift correction at 2023-08-04 21:29:57
+INFO [2023-08-04 21:29:59] Drift correction performed at 2023-08-04 21:29:59
+INFO [2023-08-04 21:29:59] Inspecting drift correction results 2023-08-04 21:29:59
+INFO [2023-08-04 21:30:01] Drift correction results inspected at 2023-08-04 21:30:01
+INFO [2023-08-04 21:30:01] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:30:02] 
+Starting drift correction at 2023-08-04 21:30:02
+INFO [2023-08-04 21:30:04] Drift correction performed at 2023-08-04 21:30:04
+INFO [2023-08-04 21:30:04] Inspecting drift correction results 2023-08-04 21:30:04
+INFO [2023-08-04 21:30:06] Drift correction results inspected at 2023-08-04 21:30:06
+INFO [2023-08-04 21:30:06] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:30:06] 
+Starting drift correction at 2023-08-04 21:30:06
+INFO [2023-08-04 21:30:08] Drift correction performed at 2023-08-04 21:30:08
+INFO [2023-08-04 21:30:08] Inspecting drift correction results 2023-08-04 21:30:08
+INFO [2023-08-04 21:30:10] Drift correction results inspected at 2023-08-04 21:30:10
+INFO [2023-08-04 21:30:10] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:30:10] 
+21% of features flagged for low quality
+INFO [2023-08-04 21:33:31] Starting logging
+INFO [2023-08-04 21:33:34] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:33:34] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:33:34] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:33:34] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:33:34] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:33:34] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:33:34] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:33:34] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:33:34] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:33:34] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:33:34] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:33:34] 
+Checking sample information
+INFO [2023-08-04 21:33:34] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:33:34] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:33:34] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:33:34] 
+Checking feature information
+INFO [2023-08-04 21:33:34] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:33:34] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:33:38] 
+Checking feature information
+INFO [2023-08-04 21:33:38] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:33:38] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:33:38] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:33:54] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:33:57] 
+Starting drift correction at 2023-08-04 21:33:57
+INFO [2023-08-04 21:33:59] Drift correction performed at 2023-08-04 21:33:59
+INFO [2023-08-04 21:34:01] Inspecting drift correction results 2023-08-04 21:34:01
+INFO [2023-08-04 21:34:03] Drift correction results inspected at 2023-08-04 21:34:03
+INFO [2023-08-04 21:34:03] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:34:03] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:35:24] Starting logging
+INFO [2023-08-04 21:35:27] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:35:27] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:35:27] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:35:27] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:35:27] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:35:27] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:35:27] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:35:27] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:35:27] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:35:27] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:35:27] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:35:27] 
+Checking sample information
+INFO [2023-08-04 21:35:27] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:35:27] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:35:27] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:35:27] 
+Checking feature information
+INFO [2023-08-04 21:35:27] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:35:27] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:35:30] 
+Checking feature information
+INFO [2023-08-04 21:35:30] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:35:30] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:35:30] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:35:45] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:35:49] 
+Starting drift correction at 2023-08-04 21:35:49
+INFO [2023-08-04 21:35:51] Drift correction performed at 2023-08-04 21:35:51
+INFO [2023-08-04 21:35:52] Inspecting drift correction results 2023-08-04 21:35:52
+INFO [2023-08-04 21:35:54] Drift correction results inspected at 2023-08-04 21:35:54
+INFO [2023-08-04 21:35:54] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:35:54] 
+Starting drift correction at 2023-08-04 21:35:54
+INFO [2023-08-04 21:35:57] Drift correction performed at 2023-08-04 21:35:57
+INFO [2023-08-04 21:35:57] Inspecting drift correction results 2023-08-04 21:35:57
+INFO [2023-08-04 21:35:59] Drift correction results inspected at 2023-08-04 21:35:59
+INFO [2023-08-04 21:35:59] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:35:59] 
+22% of features flagged for low quality
+INFO [2023-08-04 21:56:52] Starting logging
+INFO [2023-08-04 21:57:25] Starting logging
+INFO [2023-08-04 21:57:31] Corner detected correctly at row 8, column G
+INFO [2023-08-04 21:57:31] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-04 21:57:31] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-04 21:57:31] Naming the last column of sample information "Datafile"
+INFO [2023-08-04 21:57:31] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-04 21:57:31] Creating Split column from Column, Ion Mode
+INFO [2023-08-04 21:57:31] Feature_ID column not found, creating feature IDs
+INFO [2023-08-04 21:57:31] Identified m/z column mass and retention time column RT
+INFO [2023-08-04 21:57:31] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-04 21:57:31] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-04 21:57:31] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-04 21:57:31] 
+Checking sample information
+INFO [2023-08-04 21:57:31] QC column generated from rows containing 'QC'
+INFO [2023-08-04 21:57:31] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-04 21:57:31] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:57:31] 
+Checking feature information
+INFO [2023-08-04 21:57:31] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:57:31] Checking that m/z and retention time values are reasonable
+INFO [2023-08-04 21:57:35] 
+Checking feature information
+INFO [2023-08-04 21:57:35] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-04 21:57:35] Checking that feature abundances only contain numeric values
+INFO [2023-08-04 21:57:35] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-04 21:57:54] 
+56% of features flagged for low detection rate
+INFO [2023-08-04 21:57:59] 
+Starting drift correction at 2023-08-04 21:57:59
+INFO [2023-08-04 21:58:01] Drift correction performed at 2023-08-04 21:58:01
+INFO [2023-08-04 21:58:02] Inspecting drift correction results 2023-08-04 21:58:02
+INFO [2023-08-04 21:58:05] Drift correction results inspected at 2023-08-04 21:58:05
+INFO [2023-08-04 21:58:05] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:58:05] 
+Starting drift correction at 2023-08-04 21:58:05
+INFO [2023-08-04 21:58:07] Drift correction performed at 2023-08-04 21:58:07
+INFO [2023-08-04 21:58:07] Inspecting drift correction results 2023-08-04 21:58:07
+INFO [2023-08-04 21:58:09] Drift correction results inspected at 2023-08-04 21:58:09
+INFO [2023-08-04 21:58:09] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:58:10] 
+Starting drift correction at 2023-08-04 21:58:10
+INFO [2023-08-04 21:58:12] Drift correction performed at 2023-08-04 21:58:12
+INFO [2023-08-04 21:58:12] Inspecting drift correction results 2023-08-04 21:58:12
+INFO [2023-08-04 21:58:14] Drift correction results inspected at 2023-08-04 21:58:14
+INFO [2023-08-04 21:58:14] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:58:14] 
+Starting drift correction at 2023-08-04 21:58:14
+INFO [2023-08-04 21:58:16] Drift correction performed at 2023-08-04 21:58:16
+INFO [2023-08-04 21:58:16] Inspecting drift correction results 2023-08-04 21:58:16
+INFO [2023-08-04 21:58:19] Drift correction results inspected at 2023-08-04 21:58:19
+INFO [2023-08-04 21:58:19] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:58:19] 
+Starting drift correction at 2023-08-04 21:58:19
+INFO [2023-08-04 21:58:21] Drift correction performed at 2023-08-04 21:58:21
+INFO [2023-08-04 21:58:21] Inspecting drift correction results 2023-08-04 21:58:21
+INFO [2023-08-04 21:58:23] Drift correction results inspected at 2023-08-04 21:58:23
+INFO [2023-08-04 21:58:23] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-04 21:58:24] 
+21% of features flagged for low quality
+INFO [2023-08-04 23:31:06] 
+Starting feature clustering at 2023-08-04 23:31:06
+INFO [2023-08-04 23:31:06] Finding connections between features in Rxt5_EI
+INFO [2023-08-04 23:31:42] Found 395 connections in Rxt5_EI
+INFO [2023-08-04 23:31:42] Found 395 connections
+INFO [2023-08-04 23:31:42] Found 126 clusters of 2 or more features, clustering finished at 2023-08-04 23:31:42
+INFO [2023-08-04 23:31:42] Clusters compressed, left with 718 features
+INFO [2023-08-04 23:43:46] 
+Starting random forest imputation at 2023-08-04 23:43:46
+INFO [2023-08-04 23:43:47] Out-of-bag error in random forest imputation: 1.337
+INFO [2023-08-04 23:43:47] Random forest imputation finished at 2023-08-04 23:43:47 
+
+INFO [2023-08-04 23:43:47] 
+Starting random forest imputation at 2023-08-04 23:43:47
+INFO [2023-08-04 23:59:03] Finished analysis. Fri Aug  4 23:59:03 2023
+Session info:
+
+INFO [2023-08-04 23:59:03] R version 4.2.2 (2022-10-31 ucrt)
+INFO [2023-08-04 23:59:03] Platform: x86_64-w64-mingw32/x64 (64-bit)
+INFO [2023-08-04 23:59:03] Running under: Windows 7 x64 (build 7601) Service Pack 1
+INFO [2023-08-04 23:59:03] 
+INFO [2023-08-04 23:59:03] Matrix products: default
+INFO [2023-08-04 23:59:03] 
+INFO [2023-08-04 23:59:03] locale:
+INFO [2023-08-04 23:59:03] [1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252   
+INFO [2023-08-04 23:59:03] [3] LC_MONETARY=English_United States.1252 LC_NUMERIC=C                          
+INFO [2023-08-04 23:59:03] [5] LC_TIME=English_United States.1252    
+INFO [2023-08-04 23:59:03] 
+INFO [2023-08-04 23:59:03] attached base packages:
+INFO [2023-08-04 23:59:03] [1] parallel  stats     graphics  grDevices utils     datasets  methods   base     
+INFO [2023-08-04 23:59:03] 
+INFO [2023-08-04 23:59:03] other attached packages:
+INFO [2023-08-04 23:59:03]  [1] missForest_1.5       ggsci_3.0.0          readxl_1.4.2         dplyr_1.1.0          ggdendro_0.1.23     
+INFO [2023-08-04 23:59:03]  [6] Rtsne_0.17           cowplot_1.1.2        patchwork_1.1.2.9000 pcaMethods_1.90.0    doParallel_1.0.14   
+INFO [2023-08-04 23:59:03] [11] iterators_1.0.14     foreach_1.5.2        notame_0.2.0         magrittr_2.0.3       ggplot2_3.4.1.9000  
+INFO [2023-08-04 23:59:03] [16] futile.logger_1.4.3  Biobase_2.58.0       BiocGenerics_0.44.0 
+INFO [2023-08-04 23:59:03] 
+INFO [2023-08-04 23:59:03] loaded via a namespace (and not attached):
+INFO [2023-08-04 23:59:03]  [1] ggrepel_0.9.2.9999   Rcpp_1.0.10          gert_1.9.2           tidyr_1.3.0          rprojroot_2.0.3     
+INFO [2023-08-04 23:59:03]  [6] digest_0.6.31        utf8_1.2.3           R6_2.5.1             cellranger_1.1.0     futile.options_1.0.1
+INFO [2023-08-04 23:59:03] [11] sys_3.4.1            evaluate_0.20        pillar_1.8.1         itertools_0.1-3      rlang_1.0.6         
+INFO [2023-08-04 23:59:03] [16] rstudioapi_0.14      rmarkdown_2.20       labeling_0.4.2       igraph_1.4.1.9003    munsell_0.5.0       
+INFO [2023-08-04 23:59:03] [21] compiler_4.2.2       xfun_0.37            pkgconfig_2.0.3      askpass_1.1          htmltools_0.5.4     
+INFO [2023-08-04 23:59:03] [26] openssl_2.0.5        tidyselect_1.2.0     tibble_3.1.8         codetools_0.2-18     randomForest_4.7-1.1
+INFO [2023-08-04 23:59:03] [31] fansi_1.0.4          viridisLite_0.4.1    crayon_1.5.2         withr_2.5.0          MASS_7.3-58.1       
+INFO [2023-08-04 23:59:03] [36] grid_4.2.2           gtable_0.3.1         lifecycle_1.0.3      formatR_1.14         credentials_1.3.2   
+INFO [2023-08-04 23:59:03] [41] scales_1.2.1         zip_2.2.2            cli_3.6.0            stringi_1.7.12       farver_2.1.1        
+INFO [2023-08-04 23:59:03] [46] doRNG_1.8.6          fs_1.6.1             generics_0.1.3       vctrs_0.5.2          openxlsx_4.2.5.2    
+INFO [2023-08-04 23:59:03] [51] lambda.r_1.2.4       RColorBrewer_1.1-3   tools_4.2.2          glue_1.6.2           purrr_1.0.1         
+INFO [2023-08-04 23:59:03] [56] rngtools_1.5.2       fastmap_1.1.0        yaml_2.3.7           colorspace_2.1-0     knitr_1.42          
+INFO [2023-08-04 23:59:03] [61] usethis_2.1.6       
+INFO [2023-08-05 00:28:55] Starting logging
+INFO [2023-08-05 00:29:03] Corner detected correctly at row 8, column G
+INFO [2023-08-05 00:29:03] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-05 00:29:03] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-05 00:29:03] Naming the last column of sample information "Datafile"
+INFO [2023-08-05 00:29:03] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-05 00:29:03] Creating Split column from Column, Ion Mode
+INFO [2023-08-05 00:29:04] Feature_ID column not found, creating feature IDs
+INFO [2023-08-05 00:29:04] Identified m/z column mass and retention time column RT
+INFO [2023-08-05 00:29:04] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-05 00:29:06] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-05 00:29:06] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-05 00:29:06] 
+Checking sample information
+INFO [2023-08-05 00:29:06] QC column generated from rows containing 'QC'
+INFO [2023-08-05 00:29:06] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-05 00:29:06] Checking that feature abundances only contain numeric values
+INFO [2023-08-05 00:29:07] 
+Checking feature information
+INFO [2023-08-05 00:29:07] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-05 00:29:07] Checking that m/z and retention time values are reasonable
+INFO [2023-08-05 00:29:32] Starting logging
+INFO [2023-08-05 00:29:33] Corner detected correctly at row 8, column G
+INFO [2023-08-05 00:29:33] 
+Extracting sample information from rows 1 to 8 and columns H to AC
+INFO [2023-08-05 00:29:33] Replacing spaces in sample information column names with underscores (_)
+INFO [2023-08-05 00:29:33] Naming the last column of sample information "Datafile"
+INFO [2023-08-05 00:29:33] 
+Extracting feature information from rows 9 to 922 and columns A to G
+INFO [2023-08-05 00:29:33] Creating Split column from Column, Ion Mode
+INFO [2023-08-05 00:29:33] Feature_ID column not found, creating feature IDs
+INFO [2023-08-05 00:29:33] Identified m/z column mass and retention time column RT
+INFO [2023-08-05 00:29:33] Creating feature IDs from Split, m/z and retention time
+INFO [2023-08-05 00:29:33] Replacing dots (.) in feature information column names with underscores (_)
+INFO [2023-08-05 00:29:33] 
+Extracting feature abundances from rows 9 to 922 and columns H to AC
+INFO [2023-08-05 00:29:33] 
+Checking sample information
+INFO [2023-08-05 00:29:33] QC column generated from rows containing 'QC'
+INFO [2023-08-05 00:29:33] Sample ID autogenerated from injection orders and prefix ID_
+INFO [2023-08-05 00:29:33] Checking that feature abundances only contain numeric values
+INFO [2023-08-05 00:29:33] 
+Checking feature information
+INFO [2023-08-05 00:29:33] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-05 00:29:33] Checking that m/z and retention time values are reasonable
+INFO [2023-08-05 00:29:34] 
+Checking feature information
+INFO [2023-08-05 00:29:34] Checking that feature IDs are unique and not stored as numbers
+INFO [2023-08-05 00:29:34] Checking that feature abundances only contain numeric values
+INFO [2023-08-05 00:29:34] Setting row and column names of exprs based on feature and pheno data
+INFO [2023-08-05 00:29:40] 
+56% of features flagged for low detection rate
+INFO [2023-08-05 00:29:41] 
+Starting drift correction at 2023-08-05 00:29:41
+INFO [2023-08-05 00:29:49] Drift correction performed at 2023-08-05 00:29:49
+INFO [2023-08-05 00:29:54] Inspecting drift correction results 2023-08-05 00:29:54
+INFO [2023-08-05 00:30:03] Drift correction results inspected at 2023-08-05 00:30:03
+INFO [2023-08-05 00:30:03] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-05 00:30:03] 
+Starting drift correction at 2023-08-05 00:30:03
+INFO [2023-08-05 00:30:10] Drift correction performed at 2023-08-05 00:30:10
+INFO [2023-08-05 00:30:10] Inspecting drift correction results 2023-08-05 00:30:10
+INFO [2023-08-05 00:30:19] Drift correction results inspected at 2023-08-05 00:30:19
+INFO [2023-08-05 00:30:19] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-05 00:30:19] 
+Starting drift correction at 2023-08-05 00:30:19
+INFO [2023-08-05 00:30:26] Drift correction performed at 2023-08-05 00:30:26
+INFO [2023-08-05 00:30:26] Inspecting drift correction results 2023-08-05 00:30:26
+INFO [2023-08-05 00:30:34] Drift correction results inspected at 2023-08-05 00:30:34
+INFO [2023-08-05 00:30:34] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-05 00:30:34] 
+Starting drift correction at 2023-08-05 00:30:34
+INFO [2023-08-05 00:30:42] Drift correction performed at 2023-08-05 00:30:42
+INFO [2023-08-05 00:30:42] Inspecting drift correction results 2023-08-05 00:30:42
+INFO [2023-08-05 00:30:50] Drift correction results inspected at 2023-08-05 00:30:50
+INFO [2023-08-05 00:30:50] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-05 00:30:50] 
+Starting drift correction at 2023-08-05 00:30:50
+INFO [2023-08-05 00:30:57] Drift correction performed at 2023-08-05 00:30:57
+INFO [2023-08-05 00:30:58] Inspecting drift correction results 2023-08-05 00:30:58
+INFO [2023-08-05 00:31:06] Drift correction results inspected at 2023-08-05 00:31:06
+INFO [2023-08-05 00:31:06] 
+Drift correction results inspected, report:
+Drift_corrected: 57%,  Missing_QCS: 43%
+INFO [2023-08-05 00:31:07] 
+21% of features flagged for low quality
+INFO [2023-08-05 00:31:17] 
+Starting feature clustering at 2023-08-05 00:31:17
+INFO [2023-08-05 00:31:17] Finding connections between features in Rxt5_EI
+INFO [2023-08-05 00:33:16] Found 395 connections in Rxt5_EI
+INFO [2023-08-05 00:33:16] Found 395 connections
+INFO [2023-08-05 00:33:18] Found 126 clusters of 2 or more features, clustering finished at 2023-08-05 00:33:18
+INFO [2023-08-05 00:33:19] Clusters compressed, left with 718 features
+INFO [2023-08-05 00:33:24] 
+Starting random forest imputation at 2023-08-05 00:33:24
+INFO [2023-08-05 00:33:28] Out-of-bag error in random forest imputation: 1.337
+INFO [2023-08-05 00:33:28] Random forest imputation finished at 2023-08-05 00:33:28 
+
