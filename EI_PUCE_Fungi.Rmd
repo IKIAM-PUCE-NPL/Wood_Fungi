@@ -146,10 +146,10 @@ The next step for preprocessing correspond to drift correction. The drift correc
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
 
 corrected <- correct_drift(mode)
-corrected <- correct_drift(corrected)   # Second correction to improve drift correction
-corrected <- correct_drift(corrected)   # Third correction to improve drift correction
-corrected <- correct_drift(corrected)
-corrected <- correct_drift(corrected)
+#corrected <- correct_drift(corrected)   # Second correction to improve drift correction
+#corrected <- correct_drift(corrected)   # Third correction to improve drift correction
+#corrected <- correct_drift(corrected)
+#corrected <- correct_drift(corrected)
 corrected <- flag_quality(corrected, condition = "RSD_r < 0.3 & D_ratio_r < 0.5")
 
 ```
@@ -240,6 +240,7 @@ EI_corr_pca + EI_corr_sambx
 Droping flagged features
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
 no_flag <- drop_flagged(imputed)
 
 # Extracting feature table (Expression data)
@@ -247,11 +248,13 @@ peak_Height <- exprs(no_flag)
 
 # Extracting Phenotipic data
 EI_pheno_data <- no_flag@phenoData@data
+
 ```
 
 Preparing data and transposing feature table.
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
 EI_feat_table_pca  <- t(peak_Height)
 
 #Changing NA to 0 
@@ -259,11 +262,13 @@ EI_feat_table_pca[is.na(EI_feat_table_pca)]=0
 
 # Centering and Scaling features
 EI_pca <- prcomp(EI_feat_table_pca, center = T, scale. = T)
+
 ```
 
 Plotting PCA results.
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
 scores <- EI_pca$x %>%               # Get PC coordinates
   data.frame %>%                            # Convert to data frames
   mutate(Sample_ID = rownames(.)) %>%       # Create a new column with the sample names
@@ -271,11 +276,13 @@ scores <- EI_pca$x %>%               # Get PC coordinates
 
 ggplot(scores, aes(PC1, PC2, shape = Family, color = Family)) +
   geom_point(size = 3) +
+  geom_text(label=EI_pheno_data$Species, nudge_x = 0.8, nudge_y = 0.5, show.legend = FALSE, cex = 4) +
   guides(x=guide_axis(title = "PC 1 (22.02 %)"), y=guide_axis(title = "PC 2 (20.39 %)")) +
   theme_classic()
 
 # Save plot
-#ggsave('Result/GC-MS/GC_MS_EI_Score_Plot.png', width = 5, height = 4, device='png', dpi="print")
+#ggsave('Result/GC_MS_EI_Score_Plot.png', width = 5, height = 4, device='png', dpi="print")
+
 ```
 
 Plotting loading results.
