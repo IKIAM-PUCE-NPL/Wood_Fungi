@@ -72,7 +72,7 @@ ppath <- "C:/Users/F4ss0/Documents/Ikiam21062022/Wood_Fungi/"
 init_log(log_file = paste0(ppath, "Result/log.txt"))
 ```
 
-    ## INFO [2023-08-05 00:29:32] Starting logging
+    ## INFO [2023-08-07 11:38:35] Starting logging
 
 Next, the feature list was imported.
 
@@ -156,10 +156,10 @@ drift correction can be applied by smoothed cubic spline regression.
 
 ``` r
 corrected <- correct_drift(mode)
-corrected <- correct_drift(corrected)   # Second correction to improve drift correction
-corrected <- correct_drift(corrected)   # Third correction to improve drift correction
-corrected <- correct_drift(corrected)
-corrected <- correct_drift(corrected)
+#corrected <- correct_drift(corrected)   # Second correction to improve drift correction
+#corrected <- correct_drift(corrected)   # Third correction to improve drift correction
+#corrected <- correct_drift(corrected)
+#corrected <- correct_drift(corrected)
 corrected <- flag_quality(corrected, condition = "RSD_r < 0.3 & D_ratio_r < 0.5")
 ```
 
@@ -227,10 +227,10 @@ set.seed(81)
 imputed <- impute_rf(EI_compressed)
 ```
 
-    ## INFO [2023-08-05 00:33:24] 
-    ## Starting random forest imputation at 2023-08-05 00:33:24
-    ## INFO [2023-08-05 00:33:28] Out-of-bag error in random forest imputation: 1.337
-    ## INFO [2023-08-05 00:33:28] Random forest imputation finished at 2023-08-05 00:33:28
+    ## INFO [2023-08-07 11:41:31] 
+    ## Starting random forest imputation at 2023-08-07 11:41:31
+    ## INFO [2023-08-07 11:41:35] Out-of-bag error in random forest imputation: 1.321
+    ## INFO [2023-08-07 11:41:35] Random forest imputation finished at 2023-08-07 11:41:35
 
 ``` r
 # All data
@@ -283,6 +283,7 @@ scores <- EI_pca$x %>%               # Get PC coordinates
 
 ggplot(scores, aes(PC1, PC2, shape = Family, color = Family)) +
   geom_point(size = 3) +
+  geom_text(label=EI_pheno_data$Species, nudge_x = 0.8, nudge_y = 0.5, show.legend = FALSE, cex = 4) +
   guides(x=guide_axis(title = "PC 1 (22.02 %)"), y=guide_axis(title = "PC 2 (20.39 %)")) +
   theme_classic()
 ```
@@ -291,7 +292,7 @@ ggplot(scores, aes(PC1, PC2, shape = Family, color = Family)) +
 
 ``` r
 # Save plot
-#ggsave('Result/GC-MS/GC_MS_EI_Score_Plot.png', width = 5, height = 4, device='png', dpi="print")
+#ggsave('Result/GC_MS_EI_Score_Plot.png', width = 5, height = 4, device='png', dpi="print")
 ```
 
 Plotting loading results.
@@ -332,50 +333,50 @@ Finish a record.
 finish_log()
 ```
 
-    ## INFO [2023-08-05 00:33:35] Finished analysis. Sat Aug  5 00:33:35 2023
+    ## INFO [2023-08-07 11:41:42] Finished analysis. Mon Aug  7 11:41:42 2023
     ## Session info:
     ## 
-    ## INFO [2023-08-05 00:33:35] R version 4.2.2 (2022-10-31 ucrt)
-    ## INFO [2023-08-05 00:33:35] Platform: x86_64-w64-mingw32/x64 (64-bit)
-    ## INFO [2023-08-05 00:33:35] Running under: Windows 10 x64 (build 19045)
-    ## INFO [2023-08-05 00:33:35] 
-    ## INFO [2023-08-05 00:33:35] Matrix products: default
-    ## INFO [2023-08-05 00:33:35] 
-    ## INFO [2023-08-05 00:33:35] locale:
-    ## INFO [2023-08-05 00:33:35] [1] LC_COLLATE=Spanish_Spain.utf8  LC_CTYPE=Spanish_Spain.utf8   
-    ## INFO [2023-08-05 00:33:35] [3] LC_MONETARY=Spanish_Spain.utf8 LC_NUMERIC=C                  
-    ## INFO [2023-08-05 00:33:35] [5] LC_TIME=Spanish_Spain.utf8    
-    ## INFO [2023-08-05 00:33:35] 
-    ## INFO [2023-08-05 00:33:35] attached base packages:
-    ## INFO [2023-08-05 00:33:35] [1] parallel  stats     graphics  grDevices utils     datasets  methods  
-    ## INFO [2023-08-05 00:33:35] [8] base     
-    ## INFO [2023-08-05 00:33:35] 
-    ## INFO [2023-08-05 00:33:35] other attached packages:
-    ## INFO [2023-08-05 00:33:35]  [1] missForest_1.5       ggsci_3.0.0          readxl_1.4.2.9000   
-    ## INFO [2023-08-05 00:33:35]  [4] dplyr_1.1.0          ggdendro_0.1.23      Rtsne_0.17          
-    ## INFO [2023-08-05 00:33:35]  [7] cowplot_1.1.2        patchwork_1.1.2.9000 pcaMethods_1.90.0   
-    ## INFO [2023-08-05 00:33:35] [10] doParallel_1.0.14    iterators_1.0.14     foreach_1.5.2       
-    ## INFO [2023-08-05 00:33:35] [13] notame_0.2.0         magrittr_2.0.3       ggplot2_3.4.1.9000  
-    ## INFO [2023-08-05 00:33:35] [16] futile.logger_1.4.3  Biobase_2.58.0       BiocGenerics_0.44.0 
-    ## INFO [2023-08-05 00:33:35] 
-    ## INFO [2023-08-05 00:33:35] loaded via a namespace (and not attached):
-    ## INFO [2023-08-05 00:33:35]  [1] ggrepel_0.9.2.9999   Rcpp_1.0.10          gert_1.9.2          
-    ## INFO [2023-08-05 00:33:35]  [4] tidyr_1.3.0          digest_0.6.31        utf8_1.2.3          
-    ## INFO [2023-08-05 00:33:35]  [7] R6_2.5.1             cellranger_1.1.0     futile.options_1.0.1
-    ## INFO [2023-08-05 00:33:35] [10] sys_3.4.1            evaluate_0.20        highr_0.10          
-    ## INFO [2023-08-05 00:33:35] [13] pillar_1.8.1         itertools_0.1-3      rlang_1.0.6         
-    ## INFO [2023-08-05 00:33:35] [16] rstudioapi_0.14      rmarkdown_2.20       labeling_0.4.2      
-    ## INFO [2023-08-05 00:33:35] [19] igraph_1.4.1.9002    munsell_0.5.0        compiler_4.2.2      
-    ## INFO [2023-08-05 00:33:35] [22] xfun_0.37            pkgconfig_2.0.3      askpass_1.1         
-    ## INFO [2023-08-05 00:33:35] [25] htmltools_0.5.4      openssl_2.0.5        tidyselect_1.2.0    
-    ## INFO [2023-08-05 00:33:35] [28] tibble_3.1.8         codetools_0.2-18     randomForest_4.7-1.1
-    ## INFO [2023-08-05 00:33:35] [31] fansi_1.0.4          viridisLite_0.4.1    withr_2.5.0         
-    ## INFO [2023-08-05 00:33:35] [34] MASS_7.3-58.1        grid_4.2.2           gtable_0.3.1        
-    ## INFO [2023-08-05 00:33:35] [37] lifecycle_1.0.3      formatR_1.14         credentials_1.3.2   
-    ## INFO [2023-08-05 00:33:35] [40] scales_1.2.1         zip_2.2.2            cli_3.6.0           
-    ## INFO [2023-08-05 00:33:35] [43] stringi_1.7.12       farver_2.1.1         fs_1.6.1            
-    ## INFO [2023-08-05 00:33:35] [46] doRNG_1.8.6          generics_0.1.3       vctrs_0.5.2         
-    ## INFO [2023-08-05 00:33:35] [49] openxlsx_4.2.5.2     lambda.r_1.2.4       RColorBrewer_1.1-3  
-    ## INFO [2023-08-05 00:33:35] [52] tools_4.2.2          glue_1.6.2           purrr_1.0.1         
-    ## INFO [2023-08-05 00:33:35] [55] rngtools_1.5.2       fastmap_1.1.0        yaml_2.3.7          
-    ## INFO [2023-08-05 00:33:35] [58] colorspace_2.1-0     knitr_1.42           usethis_2.1.6
+    ## INFO [2023-08-07 11:41:42] R version 4.2.2 (2022-10-31 ucrt)
+    ## INFO [2023-08-07 11:41:42] Platform: x86_64-w64-mingw32/x64 (64-bit)
+    ## INFO [2023-08-07 11:41:42] Running under: Windows 10 x64 (build 19045)
+    ## INFO [2023-08-07 11:41:42] 
+    ## INFO [2023-08-07 11:41:42] Matrix products: default
+    ## INFO [2023-08-07 11:41:42] 
+    ## INFO [2023-08-07 11:41:42] locale:
+    ## INFO [2023-08-07 11:41:42] [1] LC_COLLATE=Spanish_Spain.utf8  LC_CTYPE=Spanish_Spain.utf8   
+    ## INFO [2023-08-07 11:41:42] [3] LC_MONETARY=Spanish_Spain.utf8 LC_NUMERIC=C                  
+    ## INFO [2023-08-07 11:41:42] [5] LC_TIME=Spanish_Spain.utf8    
+    ## INFO [2023-08-07 11:41:42] 
+    ## INFO [2023-08-07 11:41:42] attached base packages:
+    ## INFO [2023-08-07 11:41:42] [1] parallel  stats     graphics  grDevices utils     datasets  methods  
+    ## INFO [2023-08-07 11:41:42] [8] base     
+    ## INFO [2023-08-07 11:41:42] 
+    ## INFO [2023-08-07 11:41:42] other attached packages:
+    ## INFO [2023-08-07 11:41:42]  [1] missForest_1.5       ggsci_3.0.0          readxl_1.4.2.9000   
+    ## INFO [2023-08-07 11:41:42]  [4] dplyr_1.1.0          ggdendro_0.1.23      Rtsne_0.17          
+    ## INFO [2023-08-07 11:41:42]  [7] cowplot_1.1.2        patchwork_1.1.2.9000 pcaMethods_1.90.0   
+    ## INFO [2023-08-07 11:41:42] [10] doParallel_1.0.14    iterators_1.0.14     foreach_1.5.2       
+    ## INFO [2023-08-07 11:41:42] [13] notame_0.2.0         magrittr_2.0.3       ggplot2_3.4.1.9000  
+    ## INFO [2023-08-07 11:41:42] [16] futile.logger_1.4.3  Biobase_2.58.0       BiocGenerics_0.44.0 
+    ## INFO [2023-08-07 11:41:42] 
+    ## INFO [2023-08-07 11:41:42] loaded via a namespace (and not attached):
+    ## INFO [2023-08-07 11:41:42]  [1] ggrepel_0.9.2.9999   Rcpp_1.0.10          gert_1.9.2          
+    ## INFO [2023-08-07 11:41:42]  [4] tidyr_1.3.0          digest_0.6.31        utf8_1.2.3          
+    ## INFO [2023-08-07 11:41:42]  [7] R6_2.5.1             cellranger_1.1.0     futile.options_1.0.1
+    ## INFO [2023-08-07 11:41:42] [10] sys_3.4.1            evaluate_0.20        highr_0.10          
+    ## INFO [2023-08-07 11:41:42] [13] pillar_1.8.1         itertools_0.1-3      rlang_1.0.6         
+    ## INFO [2023-08-07 11:41:42] [16] rstudioapi_0.14      rmarkdown_2.20       labeling_0.4.2      
+    ## INFO [2023-08-07 11:41:42] [19] igraph_1.4.1.9002    munsell_0.5.0        compiler_4.2.2      
+    ## INFO [2023-08-07 11:41:42] [22] xfun_0.37            pkgconfig_2.0.3      askpass_1.1         
+    ## INFO [2023-08-07 11:41:42] [25] htmltools_0.5.4      openssl_2.0.5        tidyselect_1.2.0    
+    ## INFO [2023-08-07 11:41:42] [28] tibble_3.1.8         codetools_0.2-18     randomForest_4.7-1.1
+    ## INFO [2023-08-07 11:41:42] [31] fansi_1.0.4          viridisLite_0.4.1    withr_2.5.0         
+    ## INFO [2023-08-07 11:41:42] [34] MASS_7.3-58.1        grid_4.2.2           gtable_0.3.1        
+    ## INFO [2023-08-07 11:41:42] [37] lifecycle_1.0.3      formatR_1.14         credentials_1.3.2   
+    ## INFO [2023-08-07 11:41:42] [40] scales_1.2.1         zip_2.2.2            cli_3.6.0           
+    ## INFO [2023-08-07 11:41:42] [43] stringi_1.7.12       farver_2.1.1         fs_1.6.1            
+    ## INFO [2023-08-07 11:41:42] [46] doRNG_1.8.6          generics_0.1.3       vctrs_0.5.2         
+    ## INFO [2023-08-07 11:41:42] [49] openxlsx_4.2.5.2     lambda.r_1.2.4       RColorBrewer_1.1-3  
+    ## INFO [2023-08-07 11:41:42] [52] tools_4.2.2          glue_1.6.2           purrr_1.0.1         
+    ## INFO [2023-08-07 11:41:42] [55] rngtools_1.5.2       fastmap_1.1.0        yaml_2.3.7          
+    ## INFO [2023-08-07 11:41:42] [58] colorspace_2.1-0     knitr_1.42           usethis_2.1.6
