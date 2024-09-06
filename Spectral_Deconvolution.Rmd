@@ -1,0 +1,696 @@
+---
+title: "Spectral_Deconvolution"
+author: "Jefferson Pastuna"
+date: "2024-09-04"
+output:
+  github_document:
+    toc: true
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+usethis::git_vaccinate()
+
+```
+
+# Introduction
+
+in progress...
+
+# Before to start
+
+in progress....
+
+# eRah package workflow
+
+eRah package installation and library loading.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+
+# eRah package installation
+#install.packages('erah')
+# eRah library call
+library(erah)
+
+```
+
+Delete unwanted files of data directory and create a directory with the desired files. 
+
+```{r echo=TRUE}
+
+# Delete all file that are not in folders
+unlink('Data/Data_to_eRah/*')
+# Data folder path
+createdt('Data/Data_to_eRah/')
+
+```
+
+Creating a data.frame with chromatograms information.
+
+```{r echo=TRUE}
+
+# Loading (*.CDF) chromatograms
+instrumental <- read.csv('Data/Metadata_to_eRah/Metadata_inst.csv')
+# Loading metadata of the chromatograms
+phenotype <- read.csv('Data/Metadata_to_eRah/Metadata_pheno.csv')
+# Merge of metadata information with chromatograms
+raw_data <- newExp(instrumental = instrumental,
+                   phenotype = phenotype,
+                   info = 'Wood fungi')
+
+```
+
+## Compound Deconvolution
+
+Parameters for spectra deconvolution are specified, defining specific criteria on peak width and minimum peak height, noise threshold, and excluding certain ranges of m/z values from processing to improve the accuracy and relevance of chemical analysis.
+
+```{r echo=TRUE}
+
+dec_par <- setDecPar(min.peak.width = 0.7,
+                     min.peak.height = 500,
+                     noise.threshold = 75,
+                     avoid.processing.mz = c(59:64,73:75,147:149),
+                     analysis.time = c(3.3,56))
+
+```
+
+To carry out a process in parallel we use the "future" package, which allows us to execute tasks in parallel, improving efficiency and processing speed simultaneously.
+
+```{r echo=TRUE}
+
+plan(future::multisession,
+     workers = 14)
+
+```
+
+The deconvolution algorithm is executed using the parameters specified above, the results obtained will be saved in 'MetaboSet' S4 object.
+
+```{r echo=TRUE, warning=FALSE}
+
+dec_data <- deconvolveComp(raw_data,
+                           dec_par)
+
+```
+
+## Alignment
+
+Alignment of GC-MS deconvolved compounds with defined parameters.
+
+```{r echo=TRUE}
+
+# Alignment parameters
+alig_par <- setAlPar(min.spectra.cor = 0.90,
+                     max.time.dist = 4,
+                     mz.range = 50:550)
+# Alignment
+peak_alig <- alignComp(dec_data,
+                       alParameters = alig_par)
+
+```
+
+## Missing Compound Recovery
+
+This algorithm allow compound recovery. If a compound appears in at least of four samples than the minimum samples value, then, this compound is searched in the rest of the samples where its concentration has not been registered.
+
+
+```{r echo=TRUE, warning=FALSE}
+
+peak_find <- recMissComp(peak_alig,
+                         min.samples = 4)
+
+```
+
+# Identification
+
+Text in construction...
+
+```{r echo=TRUE, warning=FALSE}
+
+# Loading NIST 20 (*.msp) library
+#nist.database <- importMSP(filename = "E:/NIST_20_Library/Result/NIST20EI_2eRah.MSP",
+#                           DB.name = "NIST",
+#                           DB.version = "NIST20",
+#                           DB.info = "NIST MS Search Export")
+# Save library for a posterior faster loading
+#save(nist.database, file= "E:/NIST_20_Library/Result/NIST20EI_2eRah.rda")
+# Load R library
+load("E:/NIST_20_Library/Result/NIST20EI_2eRah.rda")
+mslib <- nist.database
+# Identification
+peak_iden <- identifyComp(peak_find,
+                          id.database = mslib,
+                          mz.range = NULL,
+                          n.putative = 1)
+# Identified compounds list
+id_list <- idList(peak_iden)
+# Exporting identified compounds list
+#write.csv(id_list,
+#          file = "Result/eRah_Result/NIST_Identification.csv")
+
+```
+
+Exporting spectra data to NIST MS Search identification.
+
+```{r echo=TRUE}
+
+#export2MSP(peak_iden,
+#           store.path = "Result/eRah_Result",
+#           alg.version = 2)
+
+```
+
+Exporting feature list to blank subtraction.
+
+```{r echo=TRUE}
+
+# Extracting alignment feature list
+feat_list <- alignList(peak_find,
+                       by.area = FALSE)
+# Exporting alignment feature list
+#write.csv(feat_list,
+#          file = "Result/eRah_Result/eRah_Feature_List_Export.csv")
+
+```
+
+Installation of R package to calculate linear retention index (RI).
+
+```{r echo=TRUE}
+
+# Installation of "MetaboCoreUtils" package
+#install.packages("remotes")
+#remotes::install_github("rformassspectrometry/MetaboCoreUtils")
+
+# Loading "MetaboCoreUtils" library
+library("MetaboCoreUtils")
+
+```
+
+Explain how retention time of n-alkanes was extract?
+
+Read of retention time list of n-alkanes
+
+```{r echo=TRUE}
+
+# Loadding rt of each n-alkane
+rti <- data.frame(rtime = c(4.120, 6.196, 8.832, 11.700, 14.574, 17.353,
+                            20.001, 22.522, 24.901, 27.167, 29.314, 31.369,
+                            33.325, 35.197, 36.991, 38.707, 40.360, 41.950,
+                            43.477, 44.952, 46.378, 47.754, 49.093, 50.383,
+                            51.666, 53.107),
+                  rindex = c(800, 900, 1000, 1100, 1200, 1300, 1400, 1500,
+                             1600, 1700, 1800, 1900, 2000, 2100, 2200, 2300,
+                             2400, 2500, 2600, 2700, 2800, 2900, 3000,
+                             3100, 3200, 3300))
+
+```
+
+## Level 1 identification
+
+
+
+## Leval 2 identification
+
+### Tiglic acid
+
+Mirror plot of  alignID number 6
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 6,
+            draw.color = "red",
+            comp.db = 315495,
+            xlim = c(50,120))
+# Experimental RI = 941 (Calculated by MS-DIAL software)
+# Literature RI = 941 (NIST#: 230359)
+# ΔRI = 0
+
+```
+
+Tiglic acid
+
+Mirror plot of  alignID number 7
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 7,
+            draw.color = "red",
+            comp.db = 315495,
+            xlim = c(50,120))
+# Experimental RI = 941 (Calculated by MS-DIAL software)
+# Literature RI = 941 (NIST#: 230359)
+# ΔRI = 0
+
+```
+
+Tiglic acid
+
+Mirror plot of  alignID number 8
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 8,
+            draw.color = "red",
+            comp.db = 315495,
+            xlim = c(50,120))
+# Experimental RI = 941 (Calculated by MS-DIAL software)
+# Literature RI = 941 (NIST#: 230359)
+# ΔRI = 0
+
+```
+
+Tiglic acid
+
+Mirror plot of  alignID number 9
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 9,
+            draw.color = "red",
+            comp.db = 315495,
+            xlim = c(50,120))
+# Experimental RI = 941 (Calculated by MS-DIAL software)
+# Literature RI = 941 (NIST#: 230359)
+# ΔRI = 0
+
+```
+
+### 2-Butenoic acid, 3-methyl-
+
+Mirror plot of  alignID number 10
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 10,
+            draw.color = "red",
+            comp.db = 315647,
+            xlim = c(50,135))
+# Experimental RI = 941 (Calculated by MS-DIAL software)
+# Literature RI = 947 (NIST#: 1105)
+# ΔRI = 6
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Benzoic acid, ethyl ester
+
+Mirror plot of  alignID number 123
+
+```{r echo=TRUE}
+
+# Experimental Retention Index (RI)
+indexRtime(c(3.448,3.435,3.534,3.570,3.911,4.050,4.372,4.596,4.682,4.817,
+             4.982,5.713,6.160,6.444,6.620,6.849,6.860,7.394,7.657,7.830,
+             8.072,8.302,8.409,8.649,9.284,9.432,9.798,9.826,9.898,10.103,
+             10.417,10.527,10.694,10.947,11.268,11.614,11.998,12.061,12.160,
+             12.695,12.830,13.163,13.321,13.451,13.601,13.920,13.905,14.343,
+             14.452,14.574,14.867,14.931,16.015,16.308,16.814,17.095,17.148,
+             17.278,17.375,17.503,17.594,17.774,17.863,17.922,18.018,18.077,
+             18.619,18.679,18.813,18.891,19.013,19.038,19.114,19.229,19.565,
+             19.699,19.752,20.095,20.191,20.305,20.388,20.784,21.005,21.016,
+             21.140,21.207,21.303,21.496,21.864,21.958,22.056,22.303,22.483,
+             22.551,22.698,22.895,23.232,23.691,23.947,24.104,24.558,24.672,
+             25.152,25.330,26.052,26.459,26.388,26.841,27.431,27.842,28.148,
+             28.231,28.408,28.445,28.875,29.060,29.780,29.894,30.064,30.205,
+             30.483,30.583,30.820,31.036,31.159,31.270,31.362,31.999,32.281,
+             32.417,32.546,32.764,32.769,32.939,33.158,33.193,33.408,33.415,
+             33.679,33.751,33.831,34.019,34.114,34.482,34.460,34.580,34.808,
+             34.936,35.118,35.227,35.456,35.691,35.791,35.882,35.943,36.118,
+             36.289,36.366,36.591,36.640,36.692,36.871,36.984,37.048,37.189,
+             37.750,37.958,38.073,38.200,38.225,38.600,39.445,40.212,40.356,
+             40.857,41.261,41.597,41.946,42.096,42.912,42.977,43.254,43.476,
+             43.737,44.409,44.849,44.866,44.782,44.952,45.694,46.376,47.754,
+             47.751,48.567,48.886,49.009,49.084,49.279,49.456,50.375,51.091,
+             51.308,51.521,51.621,51.793,51.989,52.253,53.003,53.515), rti)
+
+```
+
+### Benzoic acid
+
+Mirror plot of  alignID number 124
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 124,
+            draw.color = "red",
+            comp.db = 236,
+            xlim = c(50,160))
+# Experimental Retention Index (RI)
+indexRtime(9.049, rti)
+# Literature RI = 1171 (NIST#: 290514)
+# ΔRI = 10
+
+```
+
+### (E)-2,6-Dimethylocta-3,7-diene-2,6-diol
+
+Mirror plot of  alignID number 133
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 133,
+            draw.color = "red",
+            comp.db = 265239,
+            xlim = c(50,140))
+# Experimental Retention Index (RI)
+indexRtime(9.7654, rti)
+# Literature RI = 1191 (NIST#: 412424)
+# ΔRI = 1
+
+```
+
+(E)-2,6-Dimethylocta-3,7-diene-2,6-diol
+
+Mirror plot of  alignID number 134
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 134,
+            draw.color = "red",
+            comp.db = 265239,
+            xlim = c(50,140))
+# Experimental Retention Index (RI)
+indexRtime(9.7659, rti)
+# Literature RI = 1191 (NIST#: 412424)
+# ΔRI = 1
+
+```
+
+### Catechol
+
+Mirror plot of  alignID number 140
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 140,
+            draw.color = "red",
+            comp.db = 8672,
+            xlim = c(50,130))
+# Experimental Retention Index (RI)
+indexRtime(9.9673, rti)
+# Literature RI = 1209 (NIST#: 227771)
+# ΔRI = 11
+
+```
+
+Catechol
+
+Mirror plot of  alignID number 141
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 141,
+            draw.color = "red",
+            comp.db = 8672,
+            xlim = c(50,130))
+# Experimental Retention Index (RI)
+indexRtime(9.9682, rti)
+# Literature RI = 1209 (NIST#: 227771)
+# ΔRI = 11
+
+```
+
+### Benzofuran, 2,3-dihydro-
+
+Mirror plot of  alignID number 152
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 152,
+            draw.color = "red",
+            comp.db = 27705,
+            xlim = c(50,160))
+# Experimental Retention Index (RI)
+indexRtime(10.4657, rti)
+# Literature RI = 1224 (NIST#: 477791)
+# ΔRI = 6
+
+```
+
+Benzofuran, 2,3-dihydro-
+
+Mirror plot of  alignID number 154
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 154,
+            draw.color = "red",
+            comp.db = 27705,
+            xlim = c(50,160))
+# Experimental Retention Index (RI)
+indexRtime(10.4718, rti)
+# Literature RI = 1224 (NIST#: 477791)
+# ΔRI = 6
+
+```
+
+### Phenol, o-amino-
+
+Mirror plot of  alignID number 156
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 156,
+            draw.color = "red",
+            comp.db = 318455,
+            xlim = c(50,160))
+# Experimental Retention Index (RI)
+indexRtime(10.3802, rti)
+# Literature RI = 1215 (NIST#: 290667)
+# ΔRI = 0
+
+```
+
+### 1H-Pyrrole-2,5-dione, 3-ethyl-4-methyl-
+
+Mirror plot of  alignID number 178
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 178,
+            draw.color = "red",
+            comp.db = 61858,
+            xlim = c(50,250))
+# Experimental Retention Index (RI)
+indexRtime(10.8242, rti)
+# Literature RI = 1239 (NIST#: 412808)
+# ΔRI = 7
+
+```
+
+### Hydroquinone
+
+Mirror plot of  alignID number 228
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 228,
+            draw.color = "red",
+            comp.db = 8775,
+            xlim = c(50,130))
+# Experimental Retention Index (RI)
+indexRtime(11.8193, rti)
+# Literature RI = 1283 (NIST#: 228148)
+# ΔRI = 12
+
+```
+
+Hydroquinone
+
+Mirror plot of  alignID number 231
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 231,
+            draw.color = "red",
+            comp.db = 8775,
+            xlim = c(50,130))
+# Experimental Retention Index (RI)
+indexRtime(11.8256, rti)
+# Literature RI = 1283 (NIST#: 228148)
+# ΔRI = 12
+
+```
+
+Hydroquinone
+
+Mirror plot of  alignID number 232
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 232,
+            draw.color = "red",
+            comp.db = 8775,
+            xlim = c(50,130))
+# Experimental Retention Index (RI)
+indexRtime(11.8273, rti)
+# Literature RI = 1283 (NIST#: 228148)
+# ΔRI = 12
+
+```
+
+### Indole
+
+Mirror plot of  alignID number 238
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 238,
+            draw.color = "red",
+            comp.db = 319921,
+            xlim = c(50,140))
+# Experimental Retention Index (RI)
+indexRtime(12.4853, rti)
+# Literature RI = 1295 (NIST#: 227886)
+# ΔRI = 2
+
+```
+
+Indole
+
+Mirror plot of  alignID number 239
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 239,
+            draw.color = "red",
+            comp.db = 319921,
+            xlim = c(50,140))
+# Experimental Retention Index (RI)
+indexRtime(12.4894, rti)
+# Literature RI = 1295 (NIST#: 227886)
+# ΔRI = 2
+
+```
+
+Indole
+
+Mirror plot of  alignID number 242
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 242,
+            draw.color = "red",
+            comp.db = 319922,
+            xlim = c(50,140))
+# Experimental Retention Index (RI)
+indexRtime(12.4859, rti)
+# Literature RI = 1295 (NIST#: 227886)
+# ΔRI = 2
+
+```
+
+### 2-Methoxy-4-vinylphenol
+
+Mirror plot of  alignID number 252
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 252,
+            draw.color = "red",
+            comp.db = 327652,
+            xlim = c(50,210))
+# Experimental Retention Index (RI)
+indexRtime(12.9991, rti)
+# Literature RI = 1316 (NIST#: 431439)
+# ΔRI = 1
+
+```
+
+2-Methoxy-4-vinylphenol
+
+Mirror plot of  alignID number 253
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 253,
+            draw.color = "red",
+            comp.db = 327652,
+            xlim = c(50,210))
+# Experimental Retention Index (RI)
+indexRtime(13, rti)
+# Literature RI = 1316 (NIST#: 431439)
+# ΔRI = 1
+
+```
+
+Ethanone, 1-(2-hydroxy-5-methylphenyl)-
+
+Mirror plot of  alignID number 254
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 254,
+            draw.color = "red",
+            comp.db = 55545,
+            xlim = c(50,240))
+# Experimental Retention Index (RI)
+indexRtime(13.0013, rti)
+# Literature RI = 1316 (NIST#: 235301)
+# ΔRI = 1
+
+```
+
+2-Methoxy-4-vinylphenol
+
+Mirror plot of  alignID number 255
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 255,
+            draw.color = "red",
+            comp.db = 327652,
+            xlim = c(50,210))
+# Experimental Retention Index (RI)
+indexRtime(12.9997, rti)
+# Literature RI = 1316 (NIST#: 431439)
+# ΔRI = 1
+
+```
+
+
+
+## Leval 3 identification
+
+## 1,2-Cyclopentanedione
+
+Mirror plot of  alignID number 12
+
+```{r echo=TRUE}
+
+plotSpectra(peak_iden, 12,
+            draw.color = "red",
+            comp.db = 292442,
+            xlim = c(50,125))
+# Experimental RI = 951 (Calculated by MS-DIAL software)
+# Literature RI = 934 (NIST#: 162182)
+# ΔRI = 17
+
+```
+
+
+
+
+
+
+
+
