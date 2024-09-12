@@ -122,6 +122,83 @@ peak_find <- recMissComp(peak_alig,
 
 ```
 
+# Blank subtraction
+
+Exporting feature list to blank subtraction.
+
+```{r echo=TRUE}
+
+# Extracting alignment feature list
+feat_list <- alignList(peak_iden,
+                       by.area = FALSE)
+# Exporting alignment feature list
+#write.csv(feat_list,
+#          file = "Result/eRah_Result/eRah_Feature_List.csv")
+
+```
+
+"notame" package installation for blank subtraction.
+
+```{r echo=TRUE, message=FALSE}
+
+# Notame package installation
+#if (!requireNamespace("devtools", quietly = TRUE)) {
+#  install.packages("devtools")
+#}
+#devtools::install_github("antonvsdata/notame", ref = "v0.3.1")
+
+# Notame library call
+library(notame)
+
+# Dependency packages installation
+install_dependencies
+
+```
+
+Loading Excel format of the exported eRah feature list.
+
+```{r echo=TRUE}
+
+data <- read_from_excel(file = "Data/eRah_Feature_List.xlsx", sheet = 2, 
+                        corner_row = 4, corner_column = "G", 
+                        split_by = c("Column", "Ion mode"))
+
+```
+
+"notame" MetaboSet construction with the last exported eRah feature list.
+
+```{r echo=TRUE}
+
+modes <- construct_metabosets(exprs = data$exprs, 
+                              pheno_data = data$pheno_data, 
+                              feature_data = data$feature_data,
+                              group_col = "Group")
+
+```
+
+Flag contaminant to avoid in subsequent analysis.
+
+```{r echo=TRUE}
+
+# Data extraction
+mode <- modes$SHRTX5SilMS_EI
+# Change 0 value to NA
+mode <- mark_nas(mode, value = 0)
+# Removal of contaminants
+no_blank <- flag_contaminants(mode,
+                              blank_col = "Group",
+                              blank_label = "Blank",
+                              flag_thresh = 0.39,
+                              flag_label = "Contaminant")
+# Removal blank group from dataset
+no_blank <- no_blank[, no_blank$Group != "Blank"]
+
+# Exporting data to clean identified features
+#write_to_excel(no_blank,
+#               "Result/eRah_Result/eRah_Feature_List_no_blank.xlsx")
+
+```
+
 # Identification
 
 Text in construction...
@@ -158,19 +235,6 @@ Exporting spectra data to NIST MS Search identification.
 #export2MSP(peak_iden,
 #           store.path = "Result/eRah_Result",
 #           alg.version = 2)
-
-```
-
-Exporting feature list to blank subtraction.
-
-```{r echo=TRUE}
-
-# Extracting alignment feature list
-feat_list <- alignList(peak_find,
-                       by.area = FALSE)
-# Exporting alignment feature list
-#write.csv(feat_list,
-#          file = "Result/eRah_Result/eRah_Feature_List_Export.csv")
 
 ```
 
