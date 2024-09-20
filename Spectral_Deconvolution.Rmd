@@ -118,7 +118,7 @@ This algorithm allow compound recovery. If a compound appears in at least of fou
 ```{r echo=TRUE, warning=FALSE}
 
 peak_find <- recMissComp(peak_alig,
-                         min.samples = 4)
+                         min.samples = 2)
 
 ```
 
@@ -129,7 +129,7 @@ Exporting feature list to blank subtraction.
 ```{r echo=TRUE}
 
 # Extracting alignment feature list
-feat_list <- alignList(peak_iden,
+feat_list <- alignList(peak_find,
                        by.area = FALSE)
 # Exporting alignment feature list
 #write.csv(feat_list,
@@ -155,7 +155,7 @@ install_dependencies
 
 ```
 
-Loading Excel format of the exported eRah feature list.
+Loading the last exported eRah feature list (in Excel format according "notame" instruction).
 
 ```{r echo=TRUE}
 
@@ -165,7 +165,7 @@ data <- read_from_excel(file = "Data/eRah_Feature_List.xlsx", sheet = 2,
 
 ```
 
-"notame" MetaboSet construction with the last exported eRah feature list.
+"notame" MetaboSet construction with the Loading feature list.
 
 ```{r echo=TRUE}
 
