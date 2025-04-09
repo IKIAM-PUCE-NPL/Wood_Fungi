@@ -270,6 +270,31 @@ rti <- data.frame(rtime = c(4.120, 6.196, 8.832, 11.700, 14.574, 17.353,
 
 ```
 
+Calculation of RI for MSHub deconvoluted data,
+
+```{r echo=TRUE}
+
+# Load readxl package
+library("readxl")
+# Load the data
+mshub_data <- read_excel("MSHub_RT_IDs.xlsx", sheet = 1)
+# Experimental Retention Index (RI)
+mshub_ri <- indexRtime(mshub_data$`Retention Time`, rti)
+# MSHub data with RI
+mshub_ri <- data.frame(Feature_ID = mshub_data$MSHub_ID,
+                        RT = mshub_data$`Retention Time`,
+                        RI = mshub_ri)
+mshub_ri
+
+
+library(writexl)
+
+write_xlsx(mshub_ri, "MSHub_Data_with_RI.xlsx")
+
+
+```
+
+
 ## Level 1 identification
 
 
