@@ -277,7 +277,7 @@ Calculation of RI for MSHub deconvoluted data,
 # Load readxl package
 library("readxl")
 # Load the data
-mshub_data <- read_excel("MSHub_RT_IDs.xlsx", sheet = 1)
+mshub_data <- read_excel("MSHub_RT_IDs.xlsx", sheet = 2)
 # Experimental Retention Index (RI)
 mshub_ri <- indexRtime(mshub_data$`Retention Time`, rti)
 # MSHub data with RI
@@ -289,7 +289,7 @@ mshub_ri
 
 library(writexl)
 
-write_xlsx(mshub_ri, "MSHub_Data_with_RI.xlsx")
+write_xlsx(mshub_ri, "MSHub_Data_with_RI_2.xlsx")
 
 
 ```
