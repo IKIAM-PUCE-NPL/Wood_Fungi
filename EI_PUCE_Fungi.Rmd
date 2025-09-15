@@ -31,25 +31,16 @@ As a first step for the analysis, all the necessary libraries were installed and
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
 
+# Loading "notame" library and dependency libraries
 library(notame)
-library(Biobase)
-library(BiocGenerics)
-library(futile.logger)
-library(ggplot2)
-library(magrittr)
-library(foreach)
-library(iterators)
-library(parallel)
-library(doParallel)
-library(pcaMethods)
-library(patchwork)
-library(cowplot)
-library(Rtsne)
-library(ggdendro)
-library(dplyr)
-library(readxl)
-library(ggsci)
-library(missForest)
+
+# Loading "notame" dependency libraries
+install_dependencies
+
+# Loading extra library
+library("ComplexHeatmap")
+library("readxl")
+library("ggplot2")
 
 ```
 
@@ -67,7 +58,7 @@ Next, the feature list was imported.
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
 
 data <- read_from_excel(file = "Data/Data_to_notame/MZmine_Feature_List_to_notame.xlsx",
-                        sheet = 2, corner_row = 4, corner_column = "G", 
+                        sheet = 2, corner_row = 4, corner_column = "K", 
                         split_by = c("Column", "Ion Mode"), rt_limits = c(0, 60))
 
 ```
@@ -124,8 +115,7 @@ Then, features with low detection rate are first flagged and then will be remove
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
 
-mode <- flag_detection(mode, qc_limit = 0.70, group_limit = 0) # 66% o-Xylene
-                                                               # 50% 3-Hydroxy-3-phenylpropanenitrile
+mode <- flag_detection(mode, qc_limit = 0.50, group_limit = 0)
 
 ```
 
@@ -305,12 +295,58 @@ hca_plot
 
 # UpSet plot of identified metabilites
 
-The PQN normalized and autoscaled scaled data will be used.
+The dataset before data imputation will be used.
 
 ```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
 
 # Extracting identified metabolite data
-upset_set <- scl_set[!is.na(scl_set@featureData@data$Metabolite),]
+upset_set <- compressed[!is.na(compressed@featureData@data$Metabolite),]
+# Extract clean data
+upset_set <- drop_flagged(upset_set)
+# Drop QC
+upset_set <- drop_qcs(upset_set)
+# Extracting feature height table (expression data)
+upset_exprs <- exprs(upset_set)
+# Extracting sample information
+upset_pdata <- upset_set@phenoData@data
+# Extracting feature information
+upset_fdata <- upset_set@featureData@data
+# Adding row and column names
+upset_table <- upset_exprs
+rownames(upset_table) <- upset_fdata$Feature_ID
+colnames(upset_table) <- upset_pdata$Group
+
+```
+
+Printing the upset plot.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE, results='hide'}
+
+# Change values to presence (1) and absence (0)
+upset_table[upset_table > 0] <- 1
+upset_table[is.na(upset_table)] <- 0
+# Make the combination matrix
+comb_mat = make_comb_mat(upset_table)
+
+
+# Plot UpSet
+png(file="Result/notame_Result/UpSet_pot.png", width = 7, height = 3.5, units = "in", res= 300)
+upset_plot <- UpSet(comb_mat,
+                    row_names_gp = gpar(fontsize = 10),
+                    top_annotation = upset_top_annotation(comb_mat,
+                                                          gp = gpar(fill = "#F8766D",
+                                                                    col = "#F8766D"),
+                                                          add_numbers = TRUE,
+                                                          annotation_name_rot = 90,),
+                    right_annotation = upset_right_annotation(comb_mat,
+                                                              gp = gpar(fill = "#1C6AA8",
+                                                                        col = "#1C6AA8"),
+                                                              add_numbers = TRUE))
+upset_plot
+draw(upset_plot)
+dev.off()
+
+
 
 ```
 
@@ -318,6 +354,35 @@ upset_set <- scl_set[!is.na(scl_set@featureData@data$Metabolite),]
 
 
 
+
+
+
+
+
+
+# Metabolite classification
+
+Loadding library for metabite classification.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+# ClassyFire package installation
+#remotes::install_github('aberHRML/classyfireR')
+library(classyfireR)
+
+```
+
+The metabolites were classified using the ClassyFireR.
+
+```{r echo=TRUE, message=FALSE, warning=FALSE, error=FALSE}
+
+# InChI key of the metabolites you want to classify
+InChI_Keys <- c('2-Heptanone' = "NJICGAVMYWKCMW-GWJXCKMPSA-N")
+# Get classification
+Classification_List <- purrr::map(InChI_Keys, get_classification)
+Classification_List
+
+```
 
 
 
@@ -374,5 +439,19 @@ ggplot(loadings, aes(PC1, PC2)) +
 Finish a record.
 
 ```{r}
+
+#Loading de mzXML file containing DIA information
+mzxml_files_Neg1 <- list.files(pattern = "R2C_neg.mzML")
+
+# Loading libraries of "MSnbase" package
+library(MSnbase)
+
+#Getting MS1 information
+Data0ondisk_Neg1 <- readMSData(mzxml_files_Neg1, msLevel = 1, mode = "onDisk")
+
+Dataondisk_Neg1<-readMSData(mzxml_files_Neg1, mode = "onDisk")
+
+
 finish_log()
+
 ```
